@@ -1,0 +1,49 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 240px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+  color: inherit;
+}
+
+.sidenav-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.app-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.active {
+  background-color: var(--mat-sys-secondary-container);
+  font-weight: 500;
+}
