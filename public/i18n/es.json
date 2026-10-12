@@ -1,0 +1,75 @@
+{
+  "app": {
+    "title": "Barnes & Noble Inventory Platform",
+    "menu": "Menú",
+    "main-navigation": "Navegación principal",
+    "toggle-menu": "Mostrar u ocultar el menú de navegación"
+  },
+  "option": {
+    "bookstore-overview": "Resumen de Librerías",
+    "receive-books": "Recibir Libros"
+  },
+  "bookstore-overview": {
+    "title": "Resumen de Librerías",
+    "content": "Monitoree la Disponibilidad de Libros en Nuestras Tiendas",
+    "store-inventory": "Inventario de Tiendas",
+    "loading": "Cargando inventario de tiendas"
+  },
+  "bookstore-summary": {
+    "aria-label": "Inventario de {{bookstoreName}}",
+    "minimum-copies": "Copias mínimas: {{minimumCopies}}",
+    "books": "Libros",
+    "copies": "Copias: {{copies}}",
+    "empty": "Vacío",
+    "available-titles": "Títulos Disponibles",
+    "replenishment-required": "Reposición Requerida"
+  },
+  "book-receipt": {
+    "title": "Recibir Libros",
+    "subtitle": "Registre Libros en su Librería",
+    "form-aria-label": "Formulario para recibir libros",
+    "specialty": "Especialidad",
+    "bookstore": "Librería",
+    "copies-range": "acepta de 1 a {{max}} copias",
+    "book": "Libro",
+    "book-hint": "Disponible después de seleccionar una especialidad",
+    "loading-books": "Cargando libros",
+    "copies": "Copias",
+    "receive": "Recibir",
+    "cancel": "Cancelar",
+    "saving": "Registrando stock de libros",
+    "close": "Cerrar",
+    "received": "Stock de libros registrado correctamente.",
+    "error": {
+      "specialty-required": "La especialidad es obligatoria.",
+      "book-required": "El libro es obligatorio.",
+      "copies-required": "Las copias son obligatorias.",
+      "copies-invalid": "Las copias deben ser un número entero mayor que cero.",
+      "copies-range": "Las copias deben estar entre 1 y {{max}}.",
+      "books-load-failed": "No se pudieron cargar los libros.",
+      "save-failed": "No se pudo registrar el stock de libros. Inténtelo nuevamente."
+    }
+  },
+  "book-summary": {
+    "by-author": "por {{authorName}}",
+    "first-published": "Publicado por primera vez en {{year}}"
+  },
+  "specialties": {
+    "fantasy": "Fantasía",
+    "science-fiction": "Ciencia Ficción",
+    "history": "Historia",
+    "mystery": "Misterio",
+    "romance": "Romance",
+    "science": "Ciencia"
+  },
+  "page-not-found": {
+    "title": "Página no encontrada",
+    "content": "La ruta <strong>{{ invalid_path }}</strong> es inválida.",
+    "go-to-overview": "Ir al Resumen de Librerías"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "powered-by": "Desarrollado con",
+    "and": "y"
+  }
+}

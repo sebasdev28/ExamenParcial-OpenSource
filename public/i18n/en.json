@@ -1,0 +1,75 @@
+{
+  "app": {
+    "title": "Barnes & Noble Inventory Platform",
+    "menu": "Menu",
+    "main-navigation": "Main navigation",
+    "toggle-menu": "Toggle navigation menu"
+  },
+  "option": {
+    "bookstore-overview": "Bookstore Overview",
+    "receive-books": "Receive Books"
+  },
+  "bookstore-overview": {
+    "title": "Bookstore Overview",
+    "content": "Monitor Book Availability Across Our Stores",
+    "store-inventory": "Store Inventory",
+    "loading": "Loading store inventory"
+  },
+  "bookstore-summary": {
+    "aria-label": "Inventory of {{bookstoreName}}",
+    "minimum-copies": "Minimum copies: {{minimumCopies}}",
+    "books": "Books",
+    "copies": "Copies: {{copies}}",
+    "empty": "Empty",
+    "available-titles": "Available Titles",
+    "replenishment-required": "Replenishment Required"
+  },
+  "book-receipt": {
+    "title": "Receive Books",
+    "subtitle": "Register Books to Your Bookstore",
+    "form-aria-label": "Receive books form",
+    "specialty": "Specialty",
+    "bookstore": "Bookstore",
+    "copies-range": "accepts 1 to {{max}} copies",
+    "book": "Book",
+    "book-hint": "Available after selecting a specialty",
+    "loading-books": "Loading books",
+    "copies": "Copies",
+    "receive": "Receive",
+    "cancel": "Cancel",
+    "saving": "Registering book stock",
+    "close": "Close",
+    "received": "Book stock registered successfully.",
+    "error": {
+      "specialty-required": "Specialty is required.",
+      "book-required": "Book is required.",
+      "copies-required": "Copies are required.",
+      "copies-invalid": "Copies must be a whole number greater than zero.",
+      "copies-range": "Copies must be between 1 and {{max}}.",
+      "books-load-failed": "The books could not be loaded.",
+      "save-failed": "The book stock could not be registered. Please try again."
+    }
+  },
+  "book-summary": {
+    "by-author": "by {{authorName}}",
+    "first-published": "First published in {{year}}"
+  },
+  "specialties": {
+    "fantasy": "Fantasy",
+    "science-fiction": "Science Fiction",
+    "history": "History",
+    "mystery": "Mystery",
+    "romance": "Romance",
+    "science": "Science"
+  },
+  "page-not-found": {
+    "title": "Page not found",
+    "content": "The path <strong>{{ invalid_path }}</strong> is not valid.",
+    "go-to-overview": "Go to Bookstore Overview"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "powered-by": "Powered by",
+    "and": "and"
+  }
+}
