@@ -1,0 +1,22 @@
+<div class="container-with-spacing">
+    <h1>{{ 'bookstore-overview.title' | translate }}</h1>
+    <p>{{ 'bookstore-overview.content' | translate }}</p>
+
+    <section aria-labelledby="store-inventory-title">
+        <h2 id="store-inventory-title">{{ 'bookstore-overview.store-inventory' | translate }}</h2>
+        @if (bookstoresStore.loading()) {
+        <mat-spinner diameter="40" [attr.aria-label]="'bookstore-overview.loading' | translate"></mat-spinner>
+        }
+        @if (bookstoresStore.error()) {
+        <mat-error role="alert">{{ bookstoresStore.error() }}</mat-error>
+        }
+        <mat-grid-list [cols]="columns()" rowHeight="340px" gutterSize="8px"
+                       role="list" [attr.aria-label]="'bookstore-overview.store-inventory' | translate">
+            @for (bookstoreInventory of bookstoresStore.bookstoreInventories(); track bookstoreInventory.bookstore.id) {
+            <mat-grid-tile role="listitem">
+                <app-bookstore-summary [bookstoreInventory]="bookstoreInventory"/>
+            </mat-grid-tile>
+            }
+        </mat-grid-list>
+    </section>
+</div>
