@@ -1,0 +1,12 @@
+<div class="book-summary" aria-live="polite">
+    @if (book().coverUrl) {
+    <img [src]="book().coverUrl" [alt]="book().title" class="cover"/>
+    }
+    <div>
+        <p><b>{{ book().title }}</b></p>
+        <p>{{ 'book-summary.by-author' | translate: { authorName: book().authorName } }}</p>
+        @if (book().firstPublishYear) {
+        <p><i>{{ 'book-summary.first-published' | translate: { year: book().firstPublishYear } }}</i></p>
+        }
+    </div>
+</div>
