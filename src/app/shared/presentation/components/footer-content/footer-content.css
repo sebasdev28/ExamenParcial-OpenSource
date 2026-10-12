@@ -1,0 +1,14 @@
+.footer-content {
+  width: 100%;
+  min-height: 80px;
+  margin-top: 20px;
+  background-color: #2a5c45;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.footer-content a {
+  color: white;
+}
