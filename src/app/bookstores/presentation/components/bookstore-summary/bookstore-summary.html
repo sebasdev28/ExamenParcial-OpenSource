@@ -1,0 +1,29 @@
+<mat-card class="bookstore-card"
+          [attr.aria-label]="'bookstore-summary.aria-label' | translate: { bookstoreName: bookstoreInventory().bookstore.name }">
+    <mat-card-header>
+        <mat-card-title>{{ bookstoreInventory().bookstore.name }}</mat-card-title>
+        <mat-card-subtitle>
+            {{ 'specialties.' + toSpecialtyKebabCase(bookstoreInventory().bookstore.specialty) | translate }}
+            · {{ 'bookstore-summary.minimum-copies' | translate: { minimumCopies: bookstoreInventory().bookstore.minimumCopies } }}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="content-section">
+        @if (bookstoreInventory().isEmpty) {
+        <p role="status">{{ 'bookstore-summary.empty' | translate }}</p>
+        } @else {
+        <mat-list role="list" [attr.aria-label]="'bookstore-summary.books' | translate">
+            @for (item of bookstoreInventory().items; track item.bookKey) {
+            <mat-list-item role="listitem">
+                <span matListItemTitle>{{ item.bookTitle }}</span>
+                <span matListItemLine>{{ 'bookstore-summary.copies' | translate: { copies: item.totalCopies } }}</span>
+            </mat-list-item>
+            }
+        </mat-list>
+        }
+    </mat-card-content>
+    <mat-card-footer class="footer-section">
+        <span>{{ 'bookstore-summary.available-titles' | translate }}: <b>{{ bookstoreInventory().availableTitles }}</b></span>
+        <span class="default-spacer"></span>
+        <span>{{ 'bookstore-summary.replenishment-required' | translate }}: <b>{{ bookstoreInventory().replenishmentRequired }}</b></span>
+    </mat-card-footer>
+</mat-card>
