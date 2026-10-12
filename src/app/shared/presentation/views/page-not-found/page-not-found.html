@@ -1,0 +1,5 @@
+<div class="container-with-spacing" role="alert">
+  <h1>{{ 'page-not-found.title' | translate }}</h1>
+  <div [innerHTML]="'page-not-found.content' | translate: { invalid_path: invalidPath }"></div>
+</div>
+<button mat-button (click)="navigateToOverview()">{{ 'page-not-found.go-to-overview' | translate }}</button>
