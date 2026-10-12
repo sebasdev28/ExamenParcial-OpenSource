@@ -1,0 +1,11 @@
+.book-summary {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.cover {
+    width: 60px;
+    height: 90px;
+    object-fit: cover;
+}
