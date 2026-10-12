@@ -1,0 +1,177 @@
+{
+  "bookstores": [
+    {
+      "id": 1,
+      "name": "Downtown Bookstore",
+      "specialty": "fantasy",
+      "minimumCopies": 5
+    },
+    {
+      "id": 2,
+      "name": "Northside Bookstore",
+      "specialty": "science_fiction",
+      "minimumCopies": 6
+    },
+    {
+      "id": 3,
+      "name": "Heritage Bookstore",
+      "specialty": "history",
+      "minimumCopies": 4
+    },
+    {
+      "id": 4,
+      "name": "Riverside Bookstore",
+      "specialty": "mystery",
+      "minimumCopies": 5
+    },
+    {
+      "id": 5,
+      "name": "Central Bookstore",
+      "specialty": "romance",
+      "minimumCopies": 7
+    },
+    {
+      "id": 6,
+      "name": "Campus Bookstore",
+      "specialty": "science",
+      "minimumCopies": 3
+    }
+  ],
+  "book-stocks": [
+    {
+      "id": 1,
+      "bookstoreId": 1,
+      "bookKey": "/works/OL27448W",
+      "bookTitle": "The Lord of the Rings",
+      "authorName": "J. R. R. Tolkien",
+      "copies": 2,
+      "receivedAt": "2026-10-05T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "bookstoreId": 1,
+      "bookKey": "/works/OL27448W",
+      "bookTitle": "The Lord of the Rings",
+      "authorName": "J. R. R. Tolkien",
+      "copies": 4,
+      "receivedAt": "2026-10-06T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "bookstoreId": 1,
+      "bookKey": "/works/OL1000001W",
+      "bookTitle": "The Enchanted Forest",
+      "authorName": "A. Example",
+      "copies": 3,
+      "receivedAt": "2026-10-06T11:00:00Z"
+    },
+    {
+      "id": 4,
+      "bookstoreId": 1,
+      "bookKey": "/works/OL1000002W",
+      "bookTitle": "The Crystal Tower",
+      "authorName": "B. Example",
+      "copies": 5,
+      "receivedAt": "2026-10-07T12:00:00Z"
+    },
+    {
+      "id": 5,
+      "bookstoreId": 2,
+      "bookKey": "/works/OL2000001W",
+      "bookTitle": "Beyond the Red Planet",
+      "authorName": "C. Example",
+      "copies": 2,
+      "receivedAt": "2026-10-05T09:30:00Z"
+    },
+    {
+      "id": 6,
+      "bookstoreId": 2,
+      "bookKey": "/works/OL2000001W",
+      "bookTitle": "Beyond the Red Planet",
+      "authorName": "C. Example",
+      "copies": 1,
+      "receivedAt": "2026-10-06T10:30:00Z"
+    },
+    {
+      "id": 7,
+      "bookstoreId": 2,
+      "bookKey": "/works/OL2000002W",
+      "bookTitle": "The Last Starship",
+      "authorName": "D. Example",
+      "copies": 8,
+      "receivedAt": "2026-10-07T11:30:00Z"
+    },
+    {
+      "id": 8,
+      "bookstoreId": 3,
+      "bookKey": "/works/OL3000001W",
+      "bookTitle": "Ancient Civilizations",
+      "authorName": "E. Example",
+      "copies": 4,
+      "receivedAt": "2026-10-04T08:00:00Z"
+    },
+    {
+      "id": 9,
+      "bookstoreId": 3,
+      "bookKey": "/works/OL3000002W",
+      "bookTitle": "The Medieval World",
+      "authorName": "F. Example",
+      "copies": 1,
+      "receivedAt": "2026-10-08T15:00:00Z"
+    },
+    {
+      "id": 10,
+      "bookstoreId": 4,
+      "bookKey": "/works/OL4000001W",
+      "bookTitle": "The Silent Witness",
+      "authorName": "G. Example",
+      "copies": 2,
+      "receivedAt": "2026-10-06T09:00:00Z"
+    },
+    {
+      "id": 11,
+      "bookstoreId": 4,
+      "bookKey": "/works/OL4000001W",
+      "bookTitle": "The Silent Witness",
+      "authorName": "G. Example",
+      "copies": 3,
+      "receivedAt": "2026-10-08T09:00:00Z"
+    },
+    {
+      "id": 12,
+      "bookstoreId": 4,
+      "bookKey": "/works/OL4000002W",
+      "bookTitle": "The Missing Letter",
+      "authorName": "H. Example",
+      "copies": 1,
+      "receivedAt": "2026-10-09T10:00:00Z"
+    },
+    {
+      "id": 13,
+      "bookstoreId": 5,
+      "bookKey": "/works/OL5000001W",
+      "bookTitle": "Letters in Spring",
+      "authorName": "I. Example",
+      "copies": 3,
+      "receivedAt": "2026-10-05T13:00:00Z"
+    },
+    {
+      "id": 14,
+      "bookstoreId": 5,
+      "bookKey": "/works/OL5000001W",
+      "bookTitle": "Letters in Spring",
+      "authorName": "I. Example",
+      "copies": 2,
+      "receivedAt": "2026-10-08T13:00:00Z"
+    },
+    {
+      "id": 15,
+      "bookstoreId": 5,
+      "bookKey": "/works/OL5000002W",
+      "bookTitle": "Across the Summer",
+      "authorName": "J. Example",
+      "copies": 7,
+      "receivedAt": "2026-10-09T13:00:00Z"
+    }
+  ]
+}
