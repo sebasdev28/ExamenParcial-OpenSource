@@ -1,0 +1,79 @@
+<div class="container-with-spacing">
+    <h1 class="title">{{ 'book-receipt.title' | translate }}</h1>
+    <h2 class="subtitle">{{ 'book-receipt.subtitle' | translate }}</h2>
+
+    <form [formGroup]="form" (ngSubmit)="receive()" [attr.aria-label]="'book-receipt.form-aria-label' | translate">
+        <mat-form-field>
+            <mat-label>{{ 'book-receipt.specialty' | translate }}</mat-label>
+            <mat-select formControlName="specialty" required>
+                @for (specialty of specialties; track specialty) {
+                <mat-option [value]="specialty">{{ 'specialties.' + toSpecialtyKebabCase(specialty) | translate }}</mat-option>
+                }
+            </mat-select>
+            @if (isInvalidControl('specialty')) {
+            <mat-error>{{ 'book-receipt.error.specialty-required' | translate }}</mat-error>
+            }
+        </mat-form-field>
+
+        @if (selectedBookstore(); as bookstore) {
+        <p aria-live="polite">
+            <b>{{ 'book-receipt.bookstore' | translate }}:</b> {{ bookstore.name }}
+            ({{ 'book-receipt.copies-range' | translate: { max: bookstore.maximumCopiesPerReceipt } }})
+        </p>
+        }
+
+        <mat-form-field>
+            <mat-label>{{ 'book-receipt.book' | translate }}</mat-label>
+            <mat-select formControlName="bookKey" required>
+                @for (book of books(); track book.key) {
+                <mat-option [value]="book.key">{{ book.title }} - {{ book.authorName }}</mat-option>
+                }
+            </mat-select>
+            <mat-hint>{{ 'book-receipt.book-hint' | translate }}</mat-hint>
+            @if (isInvalidControl('bookKey')) {
+            <mat-error>{{ 'book-receipt.error.book-required' | translate }}</mat-error>
+            }
+        </mat-form-field>
+
+        @if (catalogStore.loading()) {
+        <mat-spinner diameter="40" [attr.aria-label]="'book-receipt.loading-books' | translate"></mat-spinner>
+        }
+        @if (catalogStore.error()) {
+        <mat-error role="alert">{{ 'book-receipt.error.books-load-failed' | translate }}</mat-error>
+        }
+
+        @if (selectedBook(); as book) {
+        <app-book-summary [book]="book"/>
+        }
+
+        <mat-form-field>
+            <mat-label>{{ 'book-receipt.copies' | translate }}</mat-label>
+            <input matInput type="number" min="1" step="1" formControlName="copies" required/>
+            @if (isInvalidControl('copies')) {
+            @if (form.controls.copies.hasError('required')) {
+            <mat-error>{{ 'book-receipt.error.copies-required' | translate }}</mat-error>
+            } @else if (form.controls.copies.hasError('copiesRange')) {
+            <mat-error>{{ 'book-receipt.error.copies-range' | translate: { max: form.controls.copies.getError('copiesRange').max } }}</mat-error>
+            } @else {
+            <mat-error>{{ 'book-receipt.error.copies-invalid' | translate }}</mat-error>
+            }
+            }
+        </mat-form-field>
+
+        @if (submitErrorKey(); as errorKey) {
+        <mat-error role="alert">{{ errorKey | translate }}</mat-error>
+        }
+
+        <div class="actions">
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid || saving()">
+                {{ 'book-receipt.receive' | translate }}
+            </button>
+            <button mat-button type="button" (click)="cancel()" [disabled]="saving()">
+                {{ 'book-receipt.cancel' | translate }}
+            </button>
+            @if (saving()) {
+            <mat-spinner diameter="24" [attr.aria-label]="'book-receipt.saving' | translate"></mat-spinner>
+            }
+        </div>
+    </form>
+</div>
